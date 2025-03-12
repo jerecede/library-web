@@ -236,17 +236,24 @@ class DataService {
         return books;
     }
 
-    getBooksByTitle(array){
+    getBooksByTitle(){
         const books = this.getBooksData();
-        books.sort((b1, b2) => b1.)
+        const booksClone = books.slice();
+        booksClone.sort((b1, b2) => b1.compareByTitle(b2));
+        return booksClone;
     }
 
-    getBooksByYop(array){
+    getBooksByYop(){
         const books = this.getBooksData();
+        const booksClone = books.slice();
+        booksClone.sort((b1, b2) => b1.compareByYop(b2));
+        return booksClone;
     }
 
-    getBooksByCategory(array){
+    getBooksByCategory(strCategory){
         const books = this.getBooksData();
+        const booksClone = books.filter(b => b.category === strCategory);
+        return booksClone;
     }
 
     convertDataToBooks(data){
@@ -261,3 +268,5 @@ class DataService {
         return createdBooks;
     }
 }
+
+export default DataService;

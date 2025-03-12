@@ -1,0 +1,77 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Arial";
+    background-color:  #4d3e27;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #4d3e27;
+    color: black;
+    height: 12vh;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+main{
+    background-image: url("./assets/background-minecraft.jpg");
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+.buttons-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: auto;
+}
+
+button {
+    background-color: #695534;
+    color: black;
+    padding: 12px 24px;
+    font-size: large;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5% 15%;
+    box-shadow: 10px 15px 19px -2px rgba(0, 0, 0, 0.486);
+}
+
+button:hover {
+    background-color: #7d6340;
+}
+
+#books-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: auto;
+    min-height: 70vh;
+}
+
+.book-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    background-color: #7d6340;
+    align-self: center;
+    text-align: center;
+    gap: 5px;
+    border-radius: 10px;
+    box-shadow: 10px 15px 19px -2px rgba(0,0,0,0.15);
+    margin: 20px 30px;
+    padding: 30px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4d3e27;
+    color: black;
+    height: 15vh;
+}
